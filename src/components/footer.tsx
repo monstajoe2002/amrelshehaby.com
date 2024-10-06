@@ -8,7 +8,7 @@ const Footer = () => {
         <h2 className="text-2xl font-semibold mb-4">
           Contact Dr. Amr El-Shehaby
         </h2>
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4 items-baseline">
           <div className="space-y-2">
             <Button asChild variant="link">
               <a
