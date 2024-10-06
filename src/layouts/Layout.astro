@@ -10,7 +10,9 @@ import '@fontsource-variable/noto-sans';
         <meta name="generator" content={Astro.generator} />
         <title>Dr. Amr El-Shehaby</title>
     </head>
-    <body class="container mx-auto">
+    <body class="flex flex-col min-h-screen">
+       <main class="container mx-auto px-4 py-8 flex-grow">
         <slot/>
+       </main>
     </body>
 </html>
