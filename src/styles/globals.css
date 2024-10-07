@@ -79,7 +79,7 @@
     @apply leading-7 [&:not(:first-child)]:mt-6;
   }
   ul {
-    @apply my-6 ml-6 list-disc [&>li]:mt-2;
+    @apply my-6 ml-6 rtl:mr-6 list-disc [&>li]:mt-2;
   }
 }
 @layer components {
