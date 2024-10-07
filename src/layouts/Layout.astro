@@ -2,14 +2,19 @@
 import "../styles/globals.css"
 import '@fontsource-variable/noto-sans';
 import { Footer } from "@/components/footer";
+import {SEO} from "astro-seo"
 ---
 
 <html lang="en">
+    
     <head>
+    <SEO
+    title="Dr. Amr El-Shehaby"
+    />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Dr. Amr El-Shehaby</title>
+        <!-- <title>Dr. Amr El-Shehaby</title> -->
     </head>
     <body class="flex flex-col min-h-screen">
        <main class="container mx-auto px-4 py-8 flex-grow">
