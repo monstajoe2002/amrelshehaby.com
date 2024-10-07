@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Noto Sans Variable", ...defaultTheme.fontFamily.sans],
+        arabic: ["Noto Sans Arabic Variable", ...defaultTheme.fontFamily.sans],
       },
       borderRadius: {
         lg: "var(--radius)",
