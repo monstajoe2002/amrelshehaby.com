@@ -2,6 +2,7 @@
 import "../styles/globals.css"
 import '@fontsource-variable/noto-sans';
 import { Footer } from "@/components/footer";
+import leksellGk from "../assets/images/leksell-gk-icon.jpg"
 import {SEO} from "astro-seo"
 type Props={
     title:string,
@@ -16,6 +17,13 @@ const {title, description}=Astro.props
     <SEO
     title={title}
     description={description}
+    openGraph={{
+        basic:{
+            title,
+            type: "website",
+            image:leksellGk.src
+        }
+    }}
     />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
