@@ -4,11 +4,13 @@ import '@fontsource-variable/noto-sans';
 import { Footer } from "@/components/footer";
 import leksellGk from "../assets/images/leksell-gk-icon.jpg"
 import {SEO} from "astro-seo"
+import { getLangFromUrl } from "@/i18n/utils";
 type Props={
     title:string,
     description:string,
 };
 const {title, description}=Astro.props
+const lang=getLangFromUrl(Astro.url)
 ---
 
 <html lang="en">
@@ -34,7 +36,7 @@ const {title, description}=Astro.props
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
     </head>
-    <body class="flex flex-col min-h-screen">
+    <body class="flex flex-col min-h-screen" dir={lang==="ar"? "rtl":"ltr"}>
        <main class="container mx-auto px-4 py-8 flex-grow">
         <slot/>
        </main>
