@@ -61,20 +61,19 @@ const t = useTranslations(lang);
             {t("home.experience.content").map((t: string) => <li>{t}</li>)}
           </ul>
         </CardContent>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>{t("home.specializations.title").toString()}</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p class="mb-2">
-              {t("home.specializations.description")}
-            </p>
-            <ul>
-              {t("home.experience.content").map((t: string) => <li>{t}</li>)}
-            </ul>
-          </CardContent>
-        </Card>
+      </Card>
+      <Card>
+        <CardHeader>
+          <CardTitle>{t("home.specializations.title").toString()}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p class="mb-2">
+            {t("home.specializations.description")}
+          </p>
+          <ul>
+            {t("home.experience.content").map((t: string) => <li>{t}</li>)}
+          </ul>
+        </CardContent>
       </Card>
     </div>
   </div>
