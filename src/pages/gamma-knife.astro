@@ -12,76 +12,87 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 	description="Cutting-edge Technology for Brain Disorders"/>
 
 	<div class="grid md:grid-cols-2 gap-8 items-start">
-		<div>
-		  <h2 class="text-2xl font-semibold mb-4">Expertise in Stereotactic Radiosurgery</h2>
-		  <p class="mb-4">
-			With extensive experience in Gamma Knife radiosurgery, Dr. Amr El-Shehaby offers non-invasive treatments for various brain disorders using cutting-edge technology.
-		  </p>
-		  <Image
-			src={gammaKnife}
-			alt="Gamma Knife Radiosurgery Illustration"
-			class="rounded-lg shadow-lg mb-4 w-full h-full object-cover"
-		  />
-		  <blockquote class="mt-6 border-l-2 pl-6 italic">
-			Gamma Knife radiosurgery: Delivered with surgical precision
-		  </blockquote>
-		  <a href="/gamma-knife">
-			<Button className="w-full mt-4">Learn More About Gamma Knife</Button>
-		  </a>
-		</div>
-		<div class="space-y-6">
-			<Card>
-				<CardHeader>
-				  <CardTitle>Qualifications & Training</CardTitle>
-				</CardHeader>
-				<CardContent>
-				  <ul>
-					<li>MD Doctoral thesis on Gamma Knife Radiosurgery as a Treatment Modality in Intracranial Meningiomas (First in Egypt at the time)</li>
-					<li>Gamma Knife radiosurgery training and mentorship under Professor Jeremy C. Ganz (2001-2006)</li>
-					<li>Official Gamma Knife PERFEXION user certification (UPMC, Pittsburgh, PA, USA, 2012)</li>
-					<li>Official Gamma Knife ICON user certification (Cleveland Clinic, Cleveland, Ohio, USA, 2017)</li>
-				  </ul>
-				</CardContent>
-			  </Card>
-  
-			  <Card>
-				<CardHeader>
-				  <CardTitle>Professional Experience</CardTitle>
-				</CardHeader>
-				<CardContent>
-				  <ul>
-					<li>Part of the team at Gamma Knife Center Cairo since August 2001</li>
-					<li>Qualified neurosurgery consultant in the field of stereotactic radiosurgery since 2006</li>
-					<li>Deputy Medical Director at Gamma Knife Center Cairo since 2011</li>
-					<li>Participated in the treatment of over 10,000 patients</li>
-					<li>Published more than 50 papers in the field of stereotactic radiosurgery</li>
-					<li>Presentations at several international conferences</li>
-					<li>Member of organizing and scientific committees of the ISRS course held in Cairo, 2019</li>
-					<li>Faculty member in ISRS Educational Courses since 2019</li>
-				  </ul>
-				</CardContent>
-			  </Card>
-  
-			  <Card>
-				<CardHeader>
-				  <CardTitle>Specializations</CardTitle>
-				</CardHeader>
-				<CardContent>
-				  <p class="mb-2">Dr. Amr El-Shehaby specializes in treating the following conditions with Gamma Knife radiosurgery:</p>
-				  <ul>
-					<li>Acoustic neuroma (vestibular schwannomas)</li>
-					<li>Brain metastases</li>
-					<li>Chondrosarcomas and Chordomas</li>
-					<li>Craniopharyngiomas</li>
-					<li>Gliomas</li>
-					<li>Meningiomas</li>
-					<li>Paragangliomas</li>
-					<li>Pituitary adenomas</li>
-					<li>Arteriovenous malformations (AVM)</li>
-					<li>Cavernous hemangiomas</li>
-					<li>Trigeminal neuralgia</li>
-				  </ul>
-				</CardContent>
-			  </Card>
-          </div>
+        <div>
+          <Image
+            src={gammaKnife}
+            alt="Gamma Knife radiosurgery: Delivered with surgical precision"
+            width={600}
+            height={400}
+            class="rounded-lg shadow-lg mb-4"
+          />
+          <blockquote class="mt-6 border-l-2 pl-6 italic">
+            Gamma Knife radiosurgery: Delivered with surgical precision
+          </blockquote>
+          <h2 class="text-2xl font-semibold my-4">What is Gamma Knife Radiosurgery?</h2>
+          <p class="mb-4">
+            Gamma Knife is a non-invasive, cutting-edge technology used to treat brain disorders without the need for traditional open surgery. It uses highly focused gamma rays to precisely target and treat areas within the brain, providing an effective, safe, and less painful alternative for patients with various conditions.
+          </p>
+          <h3 class="text-xl font-semibold mb-2">Key Benefits:</h3>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Non-invasive: No incisions, no scars</li>
+            <li>Outpatient Procedure: Many patients return home the same day</li>
+            <li>Quick Recovery: Minimal downtime, allowing you to return to your normal activities faster</li>
+            <li>Precision: Designed to treat even the most delicate areas in the brain</li>
+          </ul>
+        </div>
+
+        <div class="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>Conditions Treated</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul class="list-disc pl-5 space-y-2">
+                <li>Brain tumors (benign and malignant)</li>
+                <li>Arteriovenous malformations (AVMs)</li>
+                <li>Acoustic neuroma (vestibular schwannomas)</li>
+                <li>Meningiomas</li>
+                <li>Pituitary adenomas</li>
+                <li>Trigeminal neuralgia</li>
+                <li>Brain metastases</li>
+                <li>Chondrosarcomas and Chordomas</li>
+                <li>Craniopharyngiomas</li>
+                <li>Gliomas</li>
+                <li>Paragangliomas</li>
+                <li>Cavernous hemangiomas</li>
+                <li>Certain cases of epilepsy</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Treatment Process</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p class="mb-2">Gamma Knife radiosurgery involves four main steps:</p>
+              <ol class="my-6 ml-6 list-decimal [&>li]:mt-2">
+                <li>Frame fixation</li>
+                <li>MRI imaging</li>
+                <li>Treatment planning</li>
+                <li>Treatment delivery</li>
+              </ol>
+              <p class="mt-2">Our experienced team will guide you through each step, ensuring your comfort and understanding throughout the process.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>How Does Gamma Knife Work?</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                The Gamma Knife uses multiple beams of radiation to focus precisely on the target area, minimizing damage to healthy surrounding tissue. It allows for accurate, high-dose treatment in just a single session, and in some cases, a few sessions.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="/">
+          <Button>Back to Dr. Amr's Profile</Button>
+        </a>
+      </div>
+    </div>
 </Layout>
