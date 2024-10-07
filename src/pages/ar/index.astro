@@ -1,0 +1,79 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import leksellGkIcon from "@/assets/images/leksell-gk-icon.jpg" with { type: "image/jpeg" };
+import { Header } from "@/components/header";
+import { Button } from "@/components/ui/button";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout
+  title="Dr. Amr El-Shehaby"
+  description="With extensive experience in Gamma Knife radiosurgery, Dr. Amr El-Shehaby offers non-invasive treatments for various brain disorders using cutting-edge technology."
+>
+  <Header
+    title={t("home.header.title").toString()}
+    description={t("home.header.subtitle").toString()}
+  />
+
+  <div class="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">{t("home.body.heading")}</h2>
+      <p class="mb-4">
+        {t("home.body.paragraph")}
+      </p>
+      <Image
+        src={leksellGkIcon}
+        alt="Gamma Knife Radiosurgery Illustration"
+        class="rounded-lg shadow-lg mb-4"
+      />
+      <blockquote class="mt-6 border-l-2 pl-6 italic">
+        Gamma Knife radiosurgery: Delivered with surgical precision
+      </blockquote>
+      <a href=`${lang}/gamma-knife/`>
+        <Button className="w-full mt-4">Learn More About Gamma Knife</Button>
+      </a>
+    </div>
+    <div class="space-y-6">
+      <Card>
+        <CardHeader>
+          <CardTitle>{t("home.qualifications.title").toString()}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ul>
+            {t("home.qualifications.content").map((t: string) => <li>{t}</li>)}
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card className="h-fit">
+        <CardHeader>
+          <CardTitle>{t("home.experience.title").toString()}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ul>
+            {t("home.experience.content").map((t: string) => <li>{t}</li>)}
+          </ul>
+        </CardContent>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>{t("home.specializations.title").toString()}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p class="mb-2">
+              {t("home.specializations.description")}
+            </p>
+            <ul>
+              {t("home.experience.content").map((t: string) => <li>{t}</li>)}
+            </ul>
+          </CardContent>
+        </Card>
+      </Card>
+    </div>
+  </div>
+</Layout>
