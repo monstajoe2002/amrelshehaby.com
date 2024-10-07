@@ -5,6 +5,10 @@ import { Image } from "astro:assets"
 import gammaKnife from  "@/assets/images/gamma-knife.jpg"
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import step1 from "@/assets/images/treatment-steps/1.png"
+import step2 from "@/assets/images/treatment-steps/2.png"
+import step3 from "@/assets/images/treatment-steps/3.png"
+import step4 from "@/assets/images/treatment-steps/4.png"
 ---
 
 <Layout 
@@ -70,44 +74,44 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
           <div class="space-y-4">
             <h3>1. Frame Fixation</h3>
             <Image
-              src="/placeholder.svg?height=300&width=400"
+              src={step1}
               alt="Frame fixation process for Gamma Knife treatment"
               width={400}
               height={300}
-              class="rounded-lg shadow-md"
+              class="rounded-lg shadow-md object-cover"
             />
             <p>A lightweight frame is attached to the patient's head to ensure precise targeting during treatment.</p>
           </div>
           <div class="space-y-4">
             <h3>2. MRI Imaging</h3>
             <Image
-              src="/placeholder.svg?height=300&width=400"
+              src={step2}
               alt="MRI imaging for Gamma Knife treatment planning"
               width={400}
               height={300}
-              class="rounded-lg shadow-md"
+              class="rounded-lg shadow-md object-cover"
             />
             <p>Detailed MRI scans are taken to create a 3D map of the brain and precisely locate the treatment area.</p>
           </div>
           <div class="space-y-4">
             <h3>3. Treatment Planning</h3>
             <Image
-              src="/placeholder.svg?height=300&width=400"
+              src={step3}
               alt="Treatment planning for Gamma Knife radiosurgery"
               width={400}
               height={300}
-              class="rounded-lg shadow-md"
+              class="rounded-lg shadow-md object-cover"
             />
             <p>Our team of experts uses advanced software to create a personalized treatment plan based on the MRI images.</p>
           </div>
           <div class="space-y-4">
             <h3>4. Treatment Delivery</h3>
             <Image
-              src="/placeholder.svg?height=300&width=400"
+              src={step4}
               alt="Gamma Knife treatment delivery process"
               width={400}
               height={300}
-              class="rounded-lg shadow-md"
+              class="rounded-lg shadow-md object-cover"
             />
             <p>The patient lies comfortably while the Gamma Knife device delivers precise radiation beams to the target area.</p>
           </div>
