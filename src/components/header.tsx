@@ -1,13 +1,14 @@
-// TODO: add props to make the data dynamic
-const Header = () => {
+const Header = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => {
   return (
     <header className="text-center mb-12">
-      <h1>Dr. Amr El-Shehaby</h1>
-      <p className="text-lead font-medium">M.B.B ch.MD. PhD</p>
-      <p className="text-lead">
-        Professor of Neurosurgery <br /> Facuty of Medicine - Ain Shams
-        University
-      </p>
+      <h1>{title}</h1>
+      <p className="text-lead font-medium">{description}</p>
     </header>
   );
 };
