@@ -50,7 +50,7 @@ export const ui = {
       "Cavernous hemangiomas",
       "Trigeminal neuralgia",
     ],
-
+    "home.gamma-knife-link": "Learn More about Gamma Knife",
     footer: {
       title: "Contact Dr. Amr El-Shehaby",
       address:
@@ -106,6 +106,7 @@ export const ui = {
       "الأورام الوعائية الكهفية",
       "ألم العصب الثلاثي التوائم",
     ],
+    "home.gamma-knife-link": "للمزيد عن الجاما نايف",
 
     footer: {
       title: "تواصل مع الدكتور عمرو الشهابي",
