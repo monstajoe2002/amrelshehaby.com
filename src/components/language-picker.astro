@@ -1,10 +1,13 @@
 ---
 import { Button } from "@/components/ui/button";
 import { getLangFromUrl } from "@/i18n/utils";
+import { Languages } from "lucide-react";
 const lang = getLangFromUrl(Astro.url);
 ---
 
 <Button>
-  <a href={lang === "ar" ? "/" : "/ar/"}>{lang === "en" ? "عربي" : "English"}</a
-  >
+  <a class="flex items-baseline" href={lang === "ar" ? "/" : "/ar/"}>
+    {lang === "en" ? "عربي" : "English"}
+    <Languages className="ml-2 rtl:mr-2 size-5 my-auto" />
+  </a>
 </Button>
