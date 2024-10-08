@@ -14,7 +14,10 @@ const Footer = () => {
           <div className="space-y-2">
             <Button asChild variant="link">
               <a
-                href="geo: 30.104592289447755, 31.341258223995094"
+                href={encodeURI(
+                  "https://www.google.com/maps/search/?api=1&query=21 Dr Ahmed Amin St, El-Nozha, El Nozha, Cairo Governorate 4470152"
+                )}
+                target="_blank"
                 className="flex items-center text-primary-foreground text-wrap"
               >
                 <MapPin className="mr-2 rtl:ml-2" />
@@ -24,14 +27,14 @@ const Footer = () => {
             <Button asChild variant="link" className="mt-0">
               <a
                 href="https://wa.me/+2001011338537"
-                dir="auto"
                 className="flex items-center text-primary-foreground"
               >
-                {t("footer").phone}
+                {" "}
                 <FaWhatsapp
                   size={24}
                   className="mr-2 rtl:ml-2 items-baseline"
                 />
+                {t("footer").phone}
               </a>
             </Button>
           </div>
