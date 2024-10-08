@@ -106,7 +106,7 @@ export const ui = {
       title: "Contact Dr. Amr El-Shehaby",
       address:
         "21 Dr Ahmed Amin St, El-Nozha, El Nozha, Cairo Governorate 4470152",
-      phone: "+20 01011338537",
+      phone: "01011338537",
       email: "amrelshehaby@yahoo.com",
     },
   },
@@ -213,7 +213,7 @@ export const ui = {
       title: "تواصل مع الدكتور عمرو الشهابي",
       address:
         "21 شارع الدكتور أحمد أمين، النزهة، النزهة، محافظة القاهرة 4470152",
-      phone: "+20 01011338537",
+      phone: "01011338537",
       email: "amrelshehaby@yahoo.com",
     },
   },
