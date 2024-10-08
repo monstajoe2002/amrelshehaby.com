@@ -1,14 +1,10 @@
 ---
-import { languages } from "@/i18n/ui";
 import { Button } from "@/components/ui/button";
+import { getLangFromUrl } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<ul>
-  {
-    Object.entries(languages).map(([lang, label]) => (
-      <Button asChild>
-        <a href={`/${lang}/`}>{label}</a>
-      </Button>
-    ))
-  }
-</ul>
+<Button>
+  <a href={lang === "ar" ? "/" : "/ar/"}>{lang === "en" ? "عربي" : "English"}</a
+  >
+</Button>
