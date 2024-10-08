@@ -20,7 +20,7 @@ const Footer = () => {
                 {t("footer").address}
               </a>
             </Button>
-            <Button asChild variant="link">
+            <Button dir="auto" asChild variant="link">
               <a
                 href="tel:+20 01011338537"
                 className="flex items-center text-primary-foreground"
