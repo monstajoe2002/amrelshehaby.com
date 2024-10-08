@@ -28,7 +28,10 @@ const Footer = () => {
                 className="flex items-center text-primary-foreground"
               >
                 {t("footer").phone}
-                <FaWhatsapp size={26} className="mr-2 rtl:ml-2" />
+                <FaWhatsapp
+                  size={24}
+                  className="mr-2 rtl:ml-2 items-baseline"
+                />
               </a>
             </Button>
           </div>
