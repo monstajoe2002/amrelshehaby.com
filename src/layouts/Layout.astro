@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import leksellGk from "../assets/images/leksell-gk-icon.jpg";
 import { SEO } from "astro-seo";
 import { getLangFromUrl } from "@/i18n/utils";
+import { Button } from "@/components/ui/button";
 type Props = {
   title: string;
   description: string;
@@ -38,6 +39,9 @@ const lang = getLangFromUrl(Astro.url);
   </head>
   <body class="flex flex-col min-h-screen" dir={lang === "ar" ? "rtl" : "ltr"}>
     <main class="container mx-auto px-4 py-8 flex-grow">
+      <div class="flex justify-end mb-4">
+        <!-- Add language picker -->
+      </div>
       <slot />
     </main>
     <Footer client:only />

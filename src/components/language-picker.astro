@@ -1,0 +1,14 @@
+---
+import { languages } from "@/i18n/ui";
+import { Button } from "@/components/ui/button";
+---
+
+<ul>
+  {
+    Object.entries(languages).map(([lang, label]) => (
+      <Button asChild>
+        <a href={`/${lang}/`}>{label}</a>
+      </Button>
+    ))
+  }
+</ul>
