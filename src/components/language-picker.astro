@@ -8,6 +8,6 @@ const lang = getLangFromUrl(Astro.url);
 <Button>
   <a class="flex items-baseline" href={lang === "ar" ? "/" : "/ar/"}>
     {lang === "en" ? "عربي" : "English"}
-    <Languages className="ml-2 rtl:mr-2 size-5 my-auto" />
+    <Languages className="ltr:ml-2 rtl:mr-2 size-5 my-auto" />
   </a>
 </Button>
