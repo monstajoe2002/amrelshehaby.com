@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { FaWhatsapp } from "react-icons/fa";
 const lang = getLangFromUrl(new URL(window.location.href));
 const t = useTranslations(lang);
 
@@ -9,7 +10,7 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground mt-12 py-8">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-semibold mb-4">{t("footer").title}</h2>
-        <div className="grid md:grid-cols-2 gap-4 items-baseline">
+        <div className="grid md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Button asChild variant="link">
               <a
@@ -20,13 +21,14 @@ const Footer = () => {
                 {t("footer").address}
               </a>
             </Button>
-            <Button dir="auto" asChild variant="link">
+            <Button asChild variant="link" className="mt-0">
               <a
-                href="tel:+20 01011338537"
+                href="https://wa.me/+2001011338537"
+                dir="auto"
                 className="flex items-center text-primary-foreground"
               >
-                <Phone className="mr-2 rtl:ml-2" />
                 {t("footer").phone}
+                <FaWhatsapp size={26} className="mr-2 rtl:ml-2" />
               </a>
             </Button>
           </div>
