@@ -2,11 +2,10 @@
 import "../styles/globals.css";
 import "@fontsource-variable/noto-sans";
 import "@fontsource-variable/noto-sans-arabic";
-import { Footer } from "@/components/footer";
+import Footer from "@/components/footer.astro";
 import leksellGk from "../assets/images/leksell-gk-icon.jpg";
 import { SEO } from "astro-seo";
 import { getLangFromUrl } from "@/i18n/utils";
-import { Button } from "@/components/ui/button";
 import LanguagePicker from "@/components/language-picker.astro";
 type Props = {
   title: string;
@@ -45,6 +44,6 @@ const lang = getLangFromUrl(Astro.url);
       </div>
       <slot />
     </main>
-    <Footer client:only />
+    <Footer />
   </body>
 </html>
