@@ -2,7 +2,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaFacebook } from "react-icons/fa";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -43,6 +43,15 @@ const t = useTranslations(lang);
           >
             <Mail className="mr-2 rtl:ml-2" />
             {t("footer").email}
+          </a>
+        </Button>
+        <Button variant="link">
+          <a
+            href="https://www.facebook.com/GKcairo"
+            class="flex items-center text-primary-foreground"
+          >
+            <FaFacebook className="mr-2 rtl:ml-2 items-baseline size-6" />
+            {t("footer").facebook}
           </a>
         </Button>
       </div>

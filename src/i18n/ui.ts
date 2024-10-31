@@ -108,6 +108,7 @@ export const ui = {
         "21 Dr Ahmed Amin St, El-Nozha, El Nozha, Cairo Governorate 4470152",
       phone: "01011338537",
       email: "amrelshehaby@yahoo.com",
+      facebook: "GKcairo",
     },
   },
 
@@ -209,12 +210,14 @@ export const ui = {
     "gamma-knife.treatment-process.end":
       "بيتولى فريق عمل مدرب رعاية المريض والإعتناء به أثناء المراحل دي.",
     "gamma-knife.back": "الرجوع لموقع د.عمرو",
+    "useful-links": "روابط مفيدة",
     footer: {
       title: "تواصل مع الدكتور عمرو الشهابي",
       address:
         "21 شارع الدكتور أحمد أمين - سانت فاتيما، الدور الأرضي - شقة 2 أمام محطة بترول مصر",
       phone: "01011338537",
       email: "amrelshehaby@yahoo.com",
+      facebook: "جاما نايف القاهرة",
     },
   },
 } as const;

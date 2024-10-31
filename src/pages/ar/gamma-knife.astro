@@ -10,6 +10,7 @@ import step2 from "@/assets/images/treatment-steps/2.png";
 import step3 from "@/assets/images/treatment-steps/3.png";
 import step4 from "@/assets/images/treatment-steps/4.png";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { YouTube, LinkPreview } from "astro-embed";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -119,6 +120,28 @@ const t = useTranslations(lang);
     <p class="mt-6">
       {t("gamma-knife.treatment-process.end")}
     </p>
+  </div>
+  <div class="mt-12">
+    <h2 class="mb-6">{t('useful-links')}</h2>
+    <ul class="space-y-4 grid md:grid-cols-2 gap-8 items-start list-none">
+      <li>How a Leksell Gamma Knife® radiosurgery system works – Elekta
+        <YouTube class="mt-4 rounded-lg" id="pxikNfTbtzw" />
+      </li>
+      
+      <li class="font-arabic">
+        "الجاما نايف" أحدث الوسائل للقضاء على أورام المخ بدون جراحة
+        <YouTube class="mt-4 rounded-lg" id="Ub5xnVOC9A4" />
+      </li>
+     
+      <li class="font-arabic">فيتو - تقرير معهد الجاما نايف
+        <YouTube class="mt-4 rounded-lg" id="8mKLYI5Jrqw" />
+      </li>
+     
+      <li>
+        <LinkPreview
+          id="http://www.gkcairo.net/"/>
+      </li>
+    </ul>
   </div>
   <div class="mt-8 text-center">
     <a href=`/${lang}/`>

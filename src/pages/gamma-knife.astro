@@ -1,127 +1,177 @@
 ---
-import { Header } from "@/components/header"
-import Layout from "@/layouts/Layout.astro"
-import { Image } from "astro:assets"
-import gammaKnife from  "@/assets/images/gamma-knife.jpg"
-import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import step1 from "@/assets/images/treatment-steps/1.png"
-import step2 from "@/assets/images/treatment-steps/2.png"
-import step3 from "@/assets/images/treatment-steps/3.png"
-import step4 from "@/assets/images/treatment-steps/4.png"
+import { Header } from "@/components/header";
+import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import gammaKnife from "@/assets/images/gamma-knife.jpg";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import step1 from "@/assets/images/treatment-steps/1.png";
+import step2 from "@/assets/images/treatment-steps/2.png";
+import step3 from "@/assets/images/treatment-steps/3.png";
+import step4 from "@/assets/images/treatment-steps/4.png";
+import { YouTube, LinkPreview } from "astro-embed";
 ---
 
-<Layout 
-    title="Gamma Knife Radiosurgery" 
-    description="Gamma Knife is a non-invasive, cutting-edge technology used to treat brain disorders without the need for traditional open surgery.">
-	<Header title="Gamma Knife Radiosurgery" 
-	description="Cutting-edge Technology for Brain Disorders"/>
+<Layout
+  title="Gamma Knife Radiosurgery"
+  description="Gamma Knife is a non-invasive, cutting-edge technology used to treat brain disorders without the need for traditional open surgery."
+>
+  <Header
+    title="Gamma Knife Radiosurgery"
+    description="Cutting-edge Technology for Brain Disorders"
+  />
 
-	<div class="grid md:grid-cols-2 gap-8 items-start">
-        <div>
-          <Image
-            src={gammaKnife}
-            alt="Gamma Knife radiosurgery: Delivered with surgical precision"
-            width={600}
-            height={400}
-            class="rounded-lg shadow-lg mb-4"
-          />
-          <blockquote class="mt-6 border-l-2 pl-6 italic">
-            Gamma Knife radiosurgery: Delivered with surgical precision
-          </blockquote>
-          <h2 class="text-2xl font-semibold my-4">What is Gamma Knife Radiosurgery?</h2>
-          <p class="mb-4">
-            Gamma Knife is a non-invasive, cutting-edge technology used to treat brain disorders without the need for traditional open surgery. It uses highly focused gamma rays to precisely target and treat areas within the brain, providing an effective, safe, and less painful alternative for patients with various conditions.
-          </p>
-          <h3>Key Benefits:</h3>
-          <ul class="list-disc pl-5 mb-4">
-            <li>Non-invasive: No incisions, no scars</li>
-            <li>Outpatient Procedure: Many patients return home the same day</li>
-            <li>Quick Recovery: Minimal downtime, allowing you to return to your normal activities faster</li>
-            <li>Precision: Designed to treat even the most delicate areas in the brain</li>
+  <div class="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <Image
+        src={gammaKnife}
+        alt="Gamma Knife radiosurgery: Delivered with surgical precision"
+        width={600}
+        height={400}
+        class="rounded-lg shadow-lg mb-4"
+      />
+      <blockquote class="mt-6 border-l-2 pl-6 italic">
+        Gamma Knife radiosurgery: Delivered with surgical precision
+      </blockquote>
+      <h2 class="text-2xl font-semibold my-4">
+        What is Gamma Knife Radiosurgery?
+      </h2>
+      <p class="mb-4">
+        Gamma Knife is a non-invasive, cutting-edge technology used to treat
+        brain disorders without the need for traditional open surgery. It uses
+        highly focused gamma rays to precisely target and treat areas within the
+        brain, providing an effective, safe, and less painful alternative for
+        patients with various conditions.
+      </p>
+      <h3>Key Benefits:</h3>
+      <ul class="list-disc pl-5 mb-4">
+        <li>Non-invasive: No incisions, no scars</li>
+        <li>Outpatient Procedure: Many patients return home the same day</li>
+        <li>
+          Quick Recovery: Minimal downtime, allowing you to return to your
+          normal activities faster
+        </li>
+        <li>
+          Precision: Designed to treat even the most delicate areas in the brain
+        </li>
+      </ul>
+    </div>
+
+    <div class="space-y-6">
+      <Card>
+        <CardHeader>
+          <CardTitle>Conditions Treated</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Brain tumors (benign and malignant)</li>
+            <li>Arteriovenous malformations (AVMs)</li>
+            <li>Acoustic neuroma (vestibular schwannomas)</li>
+            <li>Meningiomas</li>
+            <li>Pituitary adenomas</li>
+            <li>Trigeminal neuralgia</li>
+            <li>Brain metastases</li>
+            <li>Chondrosarcomas and Chordomas</li>
+            <li>Craniopharyngiomas</li>
+            <li>Gliomas</li>
+            <li>Paragangliomas</li>
+            <li>Cavernous hemangiomas</li>
+            <li>Certain cases of epilepsy</li>
           </ul>
-        </div>
-
-        <div class="space-y-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Conditions Treated</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul class="list-disc pl-5 space-y-2">
-                <li>Brain tumors (benign and malignant)</li>
-                <li>Arteriovenous malformations (AVMs)</li>
-                <li>Acoustic neuroma (vestibular schwannomas)</li>
-                <li>Meningiomas</li>
-                <li>Pituitary adenomas</li>
-                <li>Trigeminal neuralgia</li>
-                <li>Brain metastases</li>
-                <li>Chondrosarcomas and Chordomas</li>
-                <li>Craniopharyngiomas</li>
-                <li>Gliomas</li>
-                <li>Paragangliomas</li>
-                <li>Cavernous hemangiomas</li>
-                <li>Certain cases of epilepsy</li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-        
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+  <div class="mt-12">
+    <h2 class="mb-6">Treatment Process</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="space-y-4">
+        <h3>1. Frame Fixation</h3>
+        <Image
+          src={step1}
+          alt="Frame fixation process for Gamma Knife treatment"
+          width={400}
+          height={300}
+          class="rounded-lg shadow-md object-cover"
+        />
+        <p>
+          A lightweight frame is attached to the patient's head to ensure
+          precise targeting during treatment.
+        </p>
       </div>
-      <div class="mt-12">
-        <h2 class="text-3xl font-bold mb-6">Treatment Process</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="space-y-4">
-            <h3>1. Frame Fixation</h3>
-            <Image
-              src={step1}
-              alt="Frame fixation process for Gamma Knife treatment"
-              width={400}
-              height={300}
-              class="rounded-lg shadow-md object-cover"
-            />
-            <p>A lightweight frame is attached to the patient's head to ensure precise targeting during treatment.</p>
-          </div>
-          <div class="space-y-4">
-            <h3>2. MRI Imaging</h3>
-            <Image
-              src={step2}
-              alt="MRI imaging for Gamma Knife treatment planning"
-              width={400}
-              height={300}
-              class="rounded-lg shadow-md object-cover"
-            />
-            <p>Detailed MRI scans are taken to create a 3D map of the brain and precisely locate the treatment area.</p>
-          </div>
-          <div class="space-y-4">
-            <h3>3. Treatment Planning</h3>
-            <Image
-              src={step3}
-              alt="Treatment planning for Gamma Knife radiosurgery"
-              width={400}
-              height={300}
-              class="rounded-lg shadow-md object-cover"
-            />
-            <p>Our team of experts uses advanced software to create a personalized treatment plan based on the MRI images.</p>
-          </div>
-          <div class="space-y-4">
-            <h3>4. Treatment Delivery</h3>
-            <Image
-              src={step4}
-              alt="Gamma Knife treatment delivery process"
-              width={400}
-              height={300}
-              class="rounded-lg shadow-md object-cover"
-            />
-            <p>The patient lies comfortably while the Gamma Knife device delivers precise radiation beams to the target area.</p>
-          </div>
-        </div>
-        <p class="mt-6">Our experienced team will guide you through each step, ensuring your comfort and understanding throughout the process.</p>
+      <div class="space-y-4">
+        <h3>2. MRI Imaging</h3>
+        <Image
+          src={step2}
+          alt="MRI imaging for Gamma Knife treatment planning"
+          width={400}
+          height={300}
+          class="rounded-lg shadow-md object-cover"
+        />
+        <p>
+          Detailed MRI scans are taken to create a 3D map of the brain and
+          precisely locate the treatment area.
+        </p>
       </div>
-      <div class="mt-8 text-center">
-        <a href="/">
-          <Button>Back to Dr. Amr's Profile</Button>
-        </a>
+      <div class="space-y-4">
+        <h3>3. Treatment Planning</h3>
+        <Image
+          src={step3}
+          alt="Treatment planning for Gamma Knife radiosurgery"
+          width={400}
+          height={300}
+          class="rounded-lg shadow-md object-cover"
+        />
+        <p>
+          Our team of experts uses advanced software to create a personalized
+          treatment plan based on the MRI images.
+        </p>
+      </div>
+      <div class="space-y-4">
+        <h3>4. Treatment Delivery</h3>
+        <Image
+          src={step4}
+          alt="Gamma Knife treatment delivery process"
+          width={400}
+          height={300}
+          class="rounded-lg shadow-md object-cover"
+        />
+        <p>
+          The patient lies comfortably while the Gamma Knife device delivers
+          precise radiation beams to the target area.
+        </p>
       </div>
     </div>
+    <p class="mt-6">
+      Our experienced team will guide you through each step, ensuring your
+      comfort and understanding throughout the process.
+    </p>
+  </div>
+  <div class="mt-12">
+    <h2 class="mb-6">Useful Links</h2>
+    <ul class="space-y-4 grid md:grid-cols-2 gap-8 items-start list-none">
+      <li>How a Leksell Gamma Knife® radiosurgery system works – Elekta
+        <YouTube class="mt-4 rounded-lg" id="pxikNfTbtzw" />
+      </li>
+      
+      <li class="font-arabic">
+        "الجاما نايف" أحدث الوسائل للقضاء على أورام المخ بدون جراحة
+        <YouTube class="mt-4 rounded-lg" id="Ub5xnVOC9A4" />
+      </li>
+     
+      <li class="font-arabic">فيتو - تقرير معهد الجاما نايف
+        <YouTube class="mt-4 rounded-lg" id="8mKLYI5Jrqw" />
+      </li>
+     
+      <li>
+        <LinkPreview
+          id="http://www.gkcairo.net/"/>
+      </li>
+    </ul>
+  </div>
+  <div class="mt-8 text-center">
+    <a href="/">
+      <Button>Back to Dr. Amr's Profile</Button>
+    </a>
+  </div>
 </Layout>
