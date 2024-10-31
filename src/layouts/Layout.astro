@@ -32,6 +32,9 @@ const lang = getLangFromUrl(Astro.url);
         description,
         image: leksellGk.src,
       }}
+      extend={{
+        link: [{ rel: "sitemap", href: "/sitemap.xml" }],
+      }}
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
