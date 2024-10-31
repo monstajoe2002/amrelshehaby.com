@@ -7,6 +7,10 @@ import leksellGk from "../assets/images/leksell-gk-icon.jpg";
 import { SEO } from "astro-seo";
 import { getLangFromUrl } from "@/i18n/utils";
 import LanguagePicker from "@/components/language-picker.astro";
+import {
+  GoogleTagmanager,
+  GoogleTagmanagerNoscript,
+} from "@digi4care/astro-google-tagmanager";
 type Props = {
   title: string;
   description: string;
@@ -32,15 +36,21 @@ const lang = getLangFromUrl(Astro.url);
         description,
         image: leksellGk.src,
       }}
-      extend={{
-        link: [{ rel: "sitemap", href: "/sitemap.xml" }],
-      }}
+    />
+    <GoogleTagmanager
+      id="GTM-M5MZN9NW"
+      domain="https://www.amrelshehaby.com"
+      container="gtm.js"
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body class="flex flex-col min-h-screen" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <GoogleTagmanagerNoscript
+      id="GTM-M5MZN9NW"
+      domain="https://www.amrelshehaby.com"
+    />
     <main class="container mx-auto px-4 py-8 flex-grow">
       <div class="flex justify-end mb-4">
         <LanguagePicker />
